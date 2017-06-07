@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Template(Handlebars)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+<h1>Handlebars Template (Table and Form)</h1>
+
+<div>
+<button id="newPerson">Add New Person</button>
+       
+<script id="some-template" type="text/x-handlebars-template"> 
+   <table id="myTable" style="width:5px">
+    <thead> 
+        <th>Name</th> 
+        <th>Age</th> 
+        <th>Modify</th> 
+    </thead> 
+    <tbody> 
+        {{#users}} 
+        <tr> 
+            <td>{{fullName person}}</td> 
+            <td>{{Age}}</td> 
+            <td><input type="button" value="Delete one Row"
+onclick="document.getElementById('myTable').deleteRow(0)">
+           </td> 
+        </tr> 
+        {{/users}} 
+    </tbody> 
+</table> 
+</script>
+ </div>
+
+<div>
+   
+   <button onclick="myFunction()">Submit</button>
+   <button onclick="myFunction()">Cancel</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js">
+</script>
+</body>
+</html>
